@@ -1,0 +1,6 @@
+verilog isim_temp "ipcore_dir/Ram_Test.v"
+verilog isim_temp "ipcore_dir/Ram_Sample.v"
+verilog isim_temp "ipcore_dir/DTW_Matrix.v"
+verilog isim_temp "DTWmadule.v"
+verilog isim_temp "TestBench_DTW_Full.v"
+verilog isim_temp "F:/xilings/14.7/ISE_DS/ISE//verilog/src/glbl.v"

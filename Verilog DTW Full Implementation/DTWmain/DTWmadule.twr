@@ -1,0 +1,1188 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+F:\xilings\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml DTWmadule.twx DTWmadule.ncd -o DTWmadule.twr DTWmadule.pcf
+-ucf DTWmadule.ucf
+
+Design file:              DTWmadule.ncd
+Physical constraint file: DTWmadule.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 100 MHz HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 6453998614541 paths analyzed, 1711 endpoints analyzed, 31 failing endpoints
+ 31 timing errors detected. (31 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  22.403ns.
+--------------------------------------------------------------------------------
+
+Paths for end point meanSample_0 (SLICE_X22Y35.CIN), 1705220823682 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -12.403ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addrSample_1_2 (FF)
+  Destination:          meanSample_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      22.359ns (Levels of Logic = 26)
+  Clock Path Skew:      -0.009ns (0.245 - 0.254)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: addrSample_1_2 to meanSample_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y35.CQ      Tcko                  0.391   addrSample_7_3
+                                                       addrSample_1_2
+    SLICE_X17Y33.C2      net (fanout=7)        0.822   addrSample_1_2
+    SLICE_X17Y33.C       Tilo                  0.259   N350
+                                                       sumSample[11]_addrSample[10]_div_4/o<10>21_SW4
+    SLICE_X21Y37.B2      net (fanout=1)        1.171   N350
+    SLICE_X21Y37.B       Tilo                  0.259   N430
+                                                       sumSample[11]_addrSample[10]_div_4/o<8>1_SW1
+    SLICE_X22Y37.B2      net (fanout=4)        0.649   N102
+    SLICE_X22Y37.B       Tilo                  0.205   N413
+                                                       sumSample[11]_addrSample[10]_div_4/o<9>2_SW5
+    SLICE_X16Y38.B6      net (fanout=3)        0.625   N413
+    SLICE_X16Y38.B       Tilo                  0.203   meanSample<3>
+                                                       sumSample[11]_addrSample[10]_div_4/o<8>1
+    SLICE_X21Y38.A6      net (fanout=17)       0.754   sumSample[11]_addrSample[10]_div_4/o<8>1
+    SLICE_X21Y38.A       Tilo                  0.259   N149
+                                                       sumSample[11]_addrSample[10]_div_4/o<7>2_SW4_SW0
+    SLICE_X21Y39.A6      net (fanout=1)        0.279   N443
+    SLICE_X21Y39.A       Tilo                  0.259   N465
+                                                       sumSample[11]_addrSample[10]_div_4/o<7>2_SW4
+    SLICE_X21Y39.B6      net (fanout=1)        0.118   N333
+    SLICE_X21Y39.B       Tilo                  0.259   N465
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_249_o191
+    SLICE_X14Y39.BX      net (fanout=2)        1.042   sumSample[11]_addrSample[10]_div_4/a[7]_GND_2_o_MUX_242_o
+    SLICE_X14Y39.CMUX    Taxc                  0.317   sumSample[11]_addrSample[10]_div_4/Madd_GND_2_o_b[10]_add_13_OUT_Madd_Madd_cy<9>
+                                                       sumSample[11]_addrSample[10]_div_4/Madd_GND_2_o_b[10]_add_13_OUT_Madd_Madd_cy<9>
+    SLICE_X13Y37.A3      net (fanout=3)        0.708   sumSample[11]_addrSample[10]_div_4/GND_2_o_b[10]_add_13_OUT<8>
+    SLICE_X13Y37.A       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/a[8]_GND_2_o_MUX_241_o
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_283_o1101
+    SLICE_X12Y33.B5      net (fanout=5)        0.720   sumSample[11]_addrSample[10]_div_4/a[8]_GND_2_o_MUX_275_o
+    SLICE_X12Y33.COUT    Topcyb                0.380   sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_lut<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+    SLICE_X12Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+    SLICE_X12Y34.AMUX    Tcina                 0.212   meanSample<5>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<4>
+    SLICE_X15Y39.D5      net (fanout=27)       0.725   sumSample[11]_addrSample[10]_div_4_OUT<5>
+    SLICE_X15Y39.D       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/a[10]_GND_2_o_MUX_305_o
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_315_o112
+    SLICE_X14Y33.D4      net (fanout=4)        0.799   sumSample[11]_addrSample[10]_div_4/a[10]_GND_2_o_MUX_305_o
+    SLICE_X14Y33.COUT    Topcyd                0.281   sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_lutdi3
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+    SLICE_X14Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+    SLICE_X14Y34.AMUX    Tcina                 0.194   meanSample<4>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<4>
+    SLICE_X17Y37.A4      net (fanout=32)       0.760   sumSample[11]_addrSample[10]_div_4_OUT<4>
+    SLICE_X17Y37.A       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/n0595<8>
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_345_o112
+    SLICE_X16Y37.D5      net (fanout=4)        0.628   sumSample[11]_addrSample[10]_div_4/a[10]_GND_2_o_MUX_335_o
+    SLICE_X16Y37.COUT    Topcyd                0.274   sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_lutdi3
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+    SLICE_X16Y38.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+    SLICE_X16Y38.AMUX    Tcina                 0.212   meanSample<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<4>
+    SLICE_X17Y33.A4      net (fanout=36)       0.737   sumSample[11]_addrSample[10]_div_4_OUT<3>
+    SLICE_X17Y33.A       Tilo                  0.259   N350
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_373_o171
+    SLICE_X20Y35.B5      net (fanout=3)        0.919   sumSample[11]_addrSample[10]_div_4/a[5]_GND_2_o_MUX_368_o
+    SLICE_X20Y35.COUT    Topcyb                0.380   sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_lut<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+    SLICE_X20Y36.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+    SLICE_X20Y36.AMUX    Tcina                 0.212   meanSample<2>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<4>
+    SLICE_X17Y37.D4      net (fanout=30)       0.866   sumSample[11]_addrSample[10]_div_4_OUT<2>
+    SLICE_X17Y37.D       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/n0595<8>
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_n0595111
+    SLICE_X20Y33.D3      net (fanout=2)        1.014   sumSample[11]_addrSample[10]_div_4/n0595<8>
+    SLICE_X20Y33.COUT    Topcyd                0.274   sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_lutdi3
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+    SLICE_X20Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+    SLICE_X20Y34.BMUX    Tcinb                 0.268   meanSample<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<5>
+    SLICE_X17Y33.B3      net (fanout=11)       0.920   sumSample[11]_addrSample[10]_div_4_OUT<1>
+    SLICE_X17Y33.B       Tilo                  0.259   N350
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_n054681
+    SLICE_X22Y34.C4      net (fanout=1)        0.847   sumSample[11]_addrSample[10]_div_4/n0546<5>
+    SLICE_X22Y34.COUT    Topcyc                0.295   sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_lut<2>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_cy<3>
+    SLICE_X22Y35.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_cy<3>
+    SLICE_X22Y35.CLK     Tcinck                0.291   meanSample<0>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_cy<5>
+                                                       meanSample_0
+    -------------------------------------------------  ---------------------------
+    Total                                     22.359ns (7.238ns logic, 15.121ns route)
+                                                       (32.4% logic, 67.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -12.399ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addrSample_1_2 (FF)
+  Destination:          meanSample_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      22.355ns (Levels of Logic = 26)
+  Clock Path Skew:      -0.009ns (0.245 - 0.254)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: addrSample_1_2 to meanSample_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y35.CQ      Tcko                  0.391   addrSample_7_3
+                                                       addrSample_1_2
+    SLICE_X17Y33.C2      net (fanout=7)        0.822   addrSample_1_2
+    SLICE_X17Y33.C       Tilo                  0.259   N350
+                                                       sumSample[11]_addrSample[10]_div_4/o<10>21_SW4
+    SLICE_X21Y37.B2      net (fanout=1)        1.171   N350
+    SLICE_X21Y37.B       Tilo                  0.259   N430
+                                                       sumSample[11]_addrSample[10]_div_4/o<8>1_SW1
+    SLICE_X22Y37.B2      net (fanout=4)        0.649   N102
+    SLICE_X22Y37.B       Tilo                  0.205   N413
+                                                       sumSample[11]_addrSample[10]_div_4/o<9>2_SW5
+    SLICE_X16Y38.B6      net (fanout=3)        0.625   N413
+    SLICE_X16Y38.B       Tilo                  0.203   meanSample<3>
+                                                       sumSample[11]_addrSample[10]_div_4/o<8>1
+    SLICE_X21Y38.A6      net (fanout=17)       0.754   sumSample[11]_addrSample[10]_div_4/o<8>1
+    SLICE_X21Y38.A       Tilo                  0.259   N149
+                                                       sumSample[11]_addrSample[10]_div_4/o<7>2_SW4_SW0
+    SLICE_X21Y39.A6      net (fanout=1)        0.279   N443
+    SLICE_X21Y39.A       Tilo                  0.259   N465
+                                                       sumSample[11]_addrSample[10]_div_4/o<7>2_SW4
+    SLICE_X21Y39.B6      net (fanout=1)        0.118   N333
+    SLICE_X21Y39.B       Tilo                  0.259   N465
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_249_o191
+    SLICE_X14Y39.BX      net (fanout=2)        1.042   sumSample[11]_addrSample[10]_div_4/a[7]_GND_2_o_MUX_242_o
+    SLICE_X14Y39.CMUX    Taxc                  0.317   sumSample[11]_addrSample[10]_div_4/Madd_GND_2_o_b[10]_add_13_OUT_Madd_Madd_cy<9>
+                                                       sumSample[11]_addrSample[10]_div_4/Madd_GND_2_o_b[10]_add_13_OUT_Madd_Madd_cy<9>
+    SLICE_X13Y37.A3      net (fanout=3)        0.708   sumSample[11]_addrSample[10]_div_4/GND_2_o_b[10]_add_13_OUT<8>
+    SLICE_X13Y37.A       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/a[8]_GND_2_o_MUX_241_o
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_283_o1101
+    SLICE_X12Y33.B5      net (fanout=5)        0.720   sumSample[11]_addrSample[10]_div_4/a[8]_GND_2_o_MUX_275_o
+    SLICE_X12Y33.COUT    Topcyb                0.380   sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_lut<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+    SLICE_X12Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+    SLICE_X12Y34.AMUX    Tcina                 0.212   meanSample<5>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<4>
+    SLICE_X15Y39.D5      net (fanout=27)       0.725   sumSample[11]_addrSample[10]_div_4_OUT<5>
+    SLICE_X15Y39.D       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/a[10]_GND_2_o_MUX_305_o
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_315_o112
+    SLICE_X14Y33.D4      net (fanout=4)        0.799   sumSample[11]_addrSample[10]_div_4/a[10]_GND_2_o_MUX_305_o
+    SLICE_X14Y33.COUT    Topcyd                0.281   sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_lutdi3
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+    SLICE_X14Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+    SLICE_X14Y34.AMUX    Tcina                 0.194   meanSample<4>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<4>
+    SLICE_X17Y37.A4      net (fanout=32)       0.760   sumSample[11]_addrSample[10]_div_4_OUT<4>
+    SLICE_X17Y37.A       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/n0595<8>
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_345_o112
+    SLICE_X16Y37.D5      net (fanout=4)        0.628   sumSample[11]_addrSample[10]_div_4/a[10]_GND_2_o_MUX_335_o
+    SLICE_X16Y37.COUT    Topcyd                0.274   sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_lutdi3
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+    SLICE_X16Y38.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+    SLICE_X16Y38.AMUX    Tcina                 0.212   meanSample<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<4>
+    SLICE_X17Y33.A4      net (fanout=36)       0.737   sumSample[11]_addrSample[10]_div_4_OUT<3>
+    SLICE_X17Y33.A       Tilo                  0.259   N350
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_373_o171
+    SLICE_X20Y35.B5      net (fanout=3)        0.919   sumSample[11]_addrSample[10]_div_4/a[5]_GND_2_o_MUX_368_o
+    SLICE_X20Y35.COUT    Topcyb                0.380   sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_lut<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+    SLICE_X20Y36.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+    SLICE_X20Y36.AMUX    Tcina                 0.212   meanSample<2>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<4>
+    SLICE_X17Y37.D4      net (fanout=30)       0.866   sumSample[11]_addrSample[10]_div_4_OUT<2>
+    SLICE_X17Y37.D       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/n0595<8>
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_n0595111
+    SLICE_X20Y33.D3      net (fanout=2)        1.014   sumSample[11]_addrSample[10]_div_4/n0595<8>
+    SLICE_X20Y33.COUT    Topcyd                0.274   sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_lutdi3
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+    SLICE_X20Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+    SLICE_X20Y34.BMUX    Tcinb                 0.268   meanSample<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<5>
+    SLICE_X17Y33.B3      net (fanout=11)       0.920   sumSample[11]_addrSample[10]_div_4_OUT<1>
+    SLICE_X17Y33.B       Tilo                  0.259   N350
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_n054681
+    SLICE_X22Y34.C4      net (fanout=1)        0.847   sumSample[11]_addrSample[10]_div_4/n0546<5>
+    SLICE_X22Y34.COUT    Topcyc                0.291   sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_lutdi2
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_cy<3>
+    SLICE_X22Y35.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_cy<3>
+    SLICE_X22Y35.CLK     Tcinck                0.291   meanSample<0>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_cy<5>
+                                                       meanSample_0
+    -------------------------------------------------  ---------------------------
+    Total                                     22.355ns (7.234ns logic, 15.121ns route)
+                                                       (32.4% logic, 67.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -12.399ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addrSample_1_2 (FF)
+  Destination:          meanSample_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      22.355ns (Levels of Logic = 26)
+  Clock Path Skew:      -0.009ns (0.245 - 0.254)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: addrSample_1_2 to meanSample_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y35.CQ      Tcko                  0.391   addrSample_7_3
+                                                       addrSample_1_2
+    SLICE_X17Y33.C2      net (fanout=7)        0.822   addrSample_1_2
+    SLICE_X17Y33.C       Tilo                  0.259   N350
+                                                       sumSample[11]_addrSample[10]_div_4/o<10>21_SW4
+    SLICE_X21Y37.B2      net (fanout=1)        1.171   N350
+    SLICE_X21Y37.B       Tilo                  0.259   N430
+                                                       sumSample[11]_addrSample[10]_div_4/o<8>1_SW1
+    SLICE_X22Y37.B2      net (fanout=4)        0.649   N102
+    SLICE_X22Y37.B       Tilo                  0.205   N413
+                                                       sumSample[11]_addrSample[10]_div_4/o<9>2_SW5
+    SLICE_X16Y38.B6      net (fanout=3)        0.625   N413
+    SLICE_X16Y38.B       Tilo                  0.203   meanSample<3>
+                                                       sumSample[11]_addrSample[10]_div_4/o<8>1
+    SLICE_X21Y38.A6      net (fanout=17)       0.754   sumSample[11]_addrSample[10]_div_4/o<8>1
+    SLICE_X21Y38.A       Tilo                  0.259   N149
+                                                       sumSample[11]_addrSample[10]_div_4/o<7>2_SW4_SW0
+    SLICE_X21Y39.A6      net (fanout=1)        0.279   N443
+    SLICE_X21Y39.A       Tilo                  0.259   N465
+                                                       sumSample[11]_addrSample[10]_div_4/o<7>2_SW4
+    SLICE_X21Y39.B6      net (fanout=1)        0.118   N333
+    SLICE_X21Y39.B       Tilo                  0.259   N465
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_249_o191
+    SLICE_X14Y39.BX      net (fanout=2)        1.042   sumSample[11]_addrSample[10]_div_4/a[7]_GND_2_o_MUX_242_o
+    SLICE_X14Y39.CMUX    Taxc                  0.317   sumSample[11]_addrSample[10]_div_4/Madd_GND_2_o_b[10]_add_13_OUT_Madd_Madd_cy<9>
+                                                       sumSample[11]_addrSample[10]_div_4/Madd_GND_2_o_b[10]_add_13_OUT_Madd_Madd_cy<9>
+    SLICE_X13Y37.A3      net (fanout=3)        0.708   sumSample[11]_addrSample[10]_div_4/GND_2_o_b[10]_add_13_OUT<8>
+    SLICE_X13Y37.A       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/a[8]_GND_2_o_MUX_241_o
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_283_o1101
+    SLICE_X12Y33.B5      net (fanout=5)        0.720   sumSample[11]_addrSample[10]_div_4/a[8]_GND_2_o_MUX_275_o
+    SLICE_X12Y33.COUT    Topcyb                0.380   sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_lut<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+    SLICE_X12Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+    SLICE_X12Y34.AMUX    Tcina                 0.212   meanSample<5>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<4>
+    SLICE_X15Y39.D5      net (fanout=27)       0.725   sumSample[11]_addrSample[10]_div_4_OUT<5>
+    SLICE_X15Y39.D       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/a[10]_GND_2_o_MUX_305_o
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_315_o112
+    SLICE_X14Y33.D4      net (fanout=4)        0.799   sumSample[11]_addrSample[10]_div_4/a[10]_GND_2_o_MUX_305_o
+    SLICE_X14Y33.COUT    Topcyd                0.281   sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_lutdi3
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+    SLICE_X14Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+    SLICE_X14Y34.AMUX    Tcina                 0.194   meanSample<4>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<4>
+    SLICE_X19Y33.B6      net (fanout=32)       0.628   sumSample[11]_addrSample[10]_div_4_OUT<4>
+    SLICE_X19Y33.B       Tilo                  0.259   N433
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_345_o161
+    SLICE_X16Y37.A5      net (fanout=4)        0.644   sumSample[11]_addrSample[10]_div_4/a[4]_GND_2_o_MUX_341_o
+    SLICE_X16Y37.COUT    Topcya                0.386   sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_lutdi
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+    SLICE_X16Y38.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+    SLICE_X16Y38.AMUX    Tcina                 0.212   meanSample<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<4>
+    SLICE_X17Y33.A4      net (fanout=36)       0.737   sumSample[11]_addrSample[10]_div_4_OUT<3>
+    SLICE_X17Y33.A       Tilo                  0.259   N350
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_373_o171
+    SLICE_X20Y35.B5      net (fanout=3)        0.919   sumSample[11]_addrSample[10]_div_4/a[5]_GND_2_o_MUX_368_o
+    SLICE_X20Y35.COUT    Topcyb                0.380   sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_lut<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+    SLICE_X20Y36.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+    SLICE_X20Y36.AMUX    Tcina                 0.212   meanSample<2>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<4>
+    SLICE_X17Y37.D4      net (fanout=30)       0.866   sumSample[11]_addrSample[10]_div_4_OUT<2>
+    SLICE_X17Y37.D       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/n0595<8>
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_n0595111
+    SLICE_X20Y33.D3      net (fanout=2)        1.014   sumSample[11]_addrSample[10]_div_4/n0595<8>
+    SLICE_X20Y33.COUT    Topcyd                0.274   sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_lutdi3
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+    SLICE_X20Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+    SLICE_X20Y34.BMUX    Tcinb                 0.268   meanSample<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<5>
+    SLICE_X17Y33.B3      net (fanout=11)       0.920   sumSample[11]_addrSample[10]_div_4_OUT<1>
+    SLICE_X17Y33.B       Tilo                  0.259   N350
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_n054681
+    SLICE_X22Y34.C4      net (fanout=1)        0.847   sumSample[11]_addrSample[10]_div_4/n0546<5>
+    SLICE_X22Y34.COUT    Topcyc                0.295   sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_lut<2>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_cy<3>
+    SLICE_X22Y35.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_cy<3>
+    SLICE_X22Y35.CLK     Tcinck                0.291   meanSample<0>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_cy<5>
+                                                       meanSample_0
+    -------------------------------------------------  ---------------------------
+    Total                                     22.355ns (7.350ns logic, 15.005ns route)
+                                                       (32.9% logic, 67.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point meanSample_0 (SLICE_X22Y35.A5), 341339184010 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -12.083ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addrSample_1_2 (FF)
+  Destination:          meanSample_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      22.039ns (Levels of Logic = 25)
+  Clock Path Skew:      -0.009ns (0.245 - 0.254)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: addrSample_1_2 to meanSample_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y35.CQ      Tcko                  0.391   addrSample_7_3
+                                                       addrSample_1_2
+    SLICE_X17Y33.C2      net (fanout=7)        0.822   addrSample_1_2
+    SLICE_X17Y33.C       Tilo                  0.259   N350
+                                                       sumSample[11]_addrSample[10]_div_4/o<10>21_SW4
+    SLICE_X21Y37.B2      net (fanout=1)        1.171   N350
+    SLICE_X21Y37.B       Tilo                  0.259   N430
+                                                       sumSample[11]_addrSample[10]_div_4/o<8>1_SW1
+    SLICE_X22Y37.B2      net (fanout=4)        0.649   N102
+    SLICE_X22Y37.B       Tilo                  0.205   N413
+                                                       sumSample[11]_addrSample[10]_div_4/o<9>2_SW5
+    SLICE_X16Y38.B6      net (fanout=3)        0.625   N413
+    SLICE_X16Y38.B       Tilo                  0.203   meanSample<3>
+                                                       sumSample[11]_addrSample[10]_div_4/o<8>1
+    SLICE_X21Y38.A6      net (fanout=17)       0.754   sumSample[11]_addrSample[10]_div_4/o<8>1
+    SLICE_X21Y38.A       Tilo                  0.259   N149
+                                                       sumSample[11]_addrSample[10]_div_4/o<7>2_SW4_SW0
+    SLICE_X21Y39.A6      net (fanout=1)        0.279   N443
+    SLICE_X21Y39.A       Tilo                  0.259   N465
+                                                       sumSample[11]_addrSample[10]_div_4/o<7>2_SW4
+    SLICE_X21Y39.B6      net (fanout=1)        0.118   N333
+    SLICE_X21Y39.B       Tilo                  0.259   N465
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_249_o191
+    SLICE_X14Y39.BX      net (fanout=2)        1.042   sumSample[11]_addrSample[10]_div_4/a[7]_GND_2_o_MUX_242_o
+    SLICE_X14Y39.CMUX    Taxc                  0.317   sumSample[11]_addrSample[10]_div_4/Madd_GND_2_o_b[10]_add_13_OUT_Madd_Madd_cy<9>
+                                                       sumSample[11]_addrSample[10]_div_4/Madd_GND_2_o_b[10]_add_13_OUT_Madd_Madd_cy<9>
+    SLICE_X13Y37.A3      net (fanout=3)        0.708   sumSample[11]_addrSample[10]_div_4/GND_2_o_b[10]_add_13_OUT<8>
+    SLICE_X13Y37.A       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/a[8]_GND_2_o_MUX_241_o
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_283_o1101
+    SLICE_X12Y33.B5      net (fanout=5)        0.720   sumSample[11]_addrSample[10]_div_4/a[8]_GND_2_o_MUX_275_o
+    SLICE_X12Y33.COUT    Topcyb                0.380   sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_lut<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+    SLICE_X12Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+    SLICE_X12Y34.AMUX    Tcina                 0.212   meanSample<5>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<4>
+    SLICE_X15Y39.D5      net (fanout=27)       0.725   sumSample[11]_addrSample[10]_div_4_OUT<5>
+    SLICE_X15Y39.D       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/a[10]_GND_2_o_MUX_305_o
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_315_o112
+    SLICE_X14Y33.D4      net (fanout=4)        0.799   sumSample[11]_addrSample[10]_div_4/a[10]_GND_2_o_MUX_305_o
+    SLICE_X14Y33.COUT    Topcyd                0.281   sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_lutdi3
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+    SLICE_X14Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+    SLICE_X14Y34.AMUX    Tcina                 0.194   meanSample<4>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<4>
+    SLICE_X17Y37.A4      net (fanout=32)       0.760   sumSample[11]_addrSample[10]_div_4_OUT<4>
+    SLICE_X17Y37.A       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/n0595<8>
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_345_o112
+    SLICE_X16Y37.D5      net (fanout=4)        0.628   sumSample[11]_addrSample[10]_div_4/a[10]_GND_2_o_MUX_335_o
+    SLICE_X16Y37.COUT    Topcyd                0.274   sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_lutdi3
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+    SLICE_X16Y38.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+    SLICE_X16Y38.AMUX    Tcina                 0.212   meanSample<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<4>
+    SLICE_X17Y33.A4      net (fanout=36)       0.737   sumSample[11]_addrSample[10]_div_4_OUT<3>
+    SLICE_X17Y33.A       Tilo                  0.259   N350
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_373_o171
+    SLICE_X20Y35.B5      net (fanout=3)        0.919   sumSample[11]_addrSample[10]_div_4/a[5]_GND_2_o_MUX_368_o
+    SLICE_X20Y35.COUT    Topcyb                0.380   sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_lut<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+    SLICE_X20Y36.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+    SLICE_X20Y36.AMUX    Tcina                 0.212   meanSample<2>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<4>
+    SLICE_X17Y37.D4      net (fanout=30)       0.866   sumSample[11]_addrSample[10]_div_4_OUT<2>
+    SLICE_X17Y37.D       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/n0595<8>
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_n0595111
+    SLICE_X20Y33.D3      net (fanout=2)        1.014   sumSample[11]_addrSample[10]_div_4/n0595<8>
+    SLICE_X20Y33.COUT    Topcyd                0.274   sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_lutdi3
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+    SLICE_X20Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+    SLICE_X20Y34.BMUX    Tcinb                 0.268   meanSample<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<5>
+    SLICE_X15Y35.D4      net (fanout=11)       0.807   sumSample[11]_addrSample[10]_div_4_OUT<1>
+    SLICE_X15Y35.D       Tilo                  0.259   addrSample_4_1
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_n0546121
+    SLICE_X22Y35.A5      net (fanout=1)        0.684   sumSample[11]_addrSample[10]_div_4/n0546<9>
+    SLICE_X22Y35.CLK     Tas                   0.545   meanSample<0>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_lutdi4
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_cy<5>
+                                                       meanSample_0
+    -------------------------------------------------  ---------------------------
+    Total                                     22.039ns (7.197ns logic, 14.842ns route)
+                                                       (32.7% logic, 67.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -12.079ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addrSample_1_2 (FF)
+  Destination:          meanSample_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      22.035ns (Levels of Logic = 25)
+  Clock Path Skew:      -0.009ns (0.245 - 0.254)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: addrSample_1_2 to meanSample_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y35.CQ      Tcko                  0.391   addrSample_7_3
+                                                       addrSample_1_2
+    SLICE_X17Y33.C2      net (fanout=7)        0.822   addrSample_1_2
+    SLICE_X17Y33.C       Tilo                  0.259   N350
+                                                       sumSample[11]_addrSample[10]_div_4/o<10>21_SW4
+    SLICE_X21Y37.B2      net (fanout=1)        1.171   N350
+    SLICE_X21Y37.B       Tilo                  0.259   N430
+                                                       sumSample[11]_addrSample[10]_div_4/o<8>1_SW1
+    SLICE_X22Y37.B2      net (fanout=4)        0.649   N102
+    SLICE_X22Y37.B       Tilo                  0.205   N413
+                                                       sumSample[11]_addrSample[10]_div_4/o<9>2_SW5
+    SLICE_X16Y38.B6      net (fanout=3)        0.625   N413
+    SLICE_X16Y38.B       Tilo                  0.203   meanSample<3>
+                                                       sumSample[11]_addrSample[10]_div_4/o<8>1
+    SLICE_X21Y38.A6      net (fanout=17)       0.754   sumSample[11]_addrSample[10]_div_4/o<8>1
+    SLICE_X21Y38.A       Tilo                  0.259   N149
+                                                       sumSample[11]_addrSample[10]_div_4/o<7>2_SW4_SW0
+    SLICE_X21Y39.A6      net (fanout=1)        0.279   N443
+    SLICE_X21Y39.A       Tilo                  0.259   N465
+                                                       sumSample[11]_addrSample[10]_div_4/o<7>2_SW4
+    SLICE_X21Y39.B6      net (fanout=1)        0.118   N333
+    SLICE_X21Y39.B       Tilo                  0.259   N465
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_249_o191
+    SLICE_X14Y39.BX      net (fanout=2)        1.042   sumSample[11]_addrSample[10]_div_4/a[7]_GND_2_o_MUX_242_o
+    SLICE_X14Y39.CMUX    Taxc                  0.317   sumSample[11]_addrSample[10]_div_4/Madd_GND_2_o_b[10]_add_13_OUT_Madd_Madd_cy<9>
+                                                       sumSample[11]_addrSample[10]_div_4/Madd_GND_2_o_b[10]_add_13_OUT_Madd_Madd_cy<9>
+    SLICE_X13Y37.A3      net (fanout=3)        0.708   sumSample[11]_addrSample[10]_div_4/GND_2_o_b[10]_add_13_OUT<8>
+    SLICE_X13Y37.A       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/a[8]_GND_2_o_MUX_241_o
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_283_o1101
+    SLICE_X12Y33.B5      net (fanout=5)        0.720   sumSample[11]_addrSample[10]_div_4/a[8]_GND_2_o_MUX_275_o
+    SLICE_X12Y33.COUT    Topcyb                0.380   sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_lut<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+    SLICE_X12Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+    SLICE_X12Y34.AMUX    Tcina                 0.212   meanSample<5>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<4>
+    SLICE_X15Y39.D5      net (fanout=27)       0.725   sumSample[11]_addrSample[10]_div_4_OUT<5>
+    SLICE_X15Y39.D       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/a[10]_GND_2_o_MUX_305_o
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_315_o112
+    SLICE_X14Y33.D4      net (fanout=4)        0.799   sumSample[11]_addrSample[10]_div_4/a[10]_GND_2_o_MUX_305_o
+    SLICE_X14Y33.COUT    Topcyd                0.281   sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_lutdi3
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+    SLICE_X14Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+    SLICE_X14Y34.AMUX    Tcina                 0.194   meanSample<4>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<4>
+    SLICE_X19Y33.B6      net (fanout=32)       0.628   sumSample[11]_addrSample[10]_div_4_OUT<4>
+    SLICE_X19Y33.B       Tilo                  0.259   N433
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_345_o161
+    SLICE_X16Y37.A5      net (fanout=4)        0.644   sumSample[11]_addrSample[10]_div_4/a[4]_GND_2_o_MUX_341_o
+    SLICE_X16Y37.COUT    Topcya                0.386   sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_lutdi
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+    SLICE_X16Y38.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+    SLICE_X16Y38.AMUX    Tcina                 0.212   meanSample<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<4>
+    SLICE_X17Y33.A4      net (fanout=36)       0.737   sumSample[11]_addrSample[10]_div_4_OUT<3>
+    SLICE_X17Y33.A       Tilo                  0.259   N350
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_373_o171
+    SLICE_X20Y35.B5      net (fanout=3)        0.919   sumSample[11]_addrSample[10]_div_4/a[5]_GND_2_o_MUX_368_o
+    SLICE_X20Y35.COUT    Topcyb                0.380   sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_lut<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+    SLICE_X20Y36.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+    SLICE_X20Y36.AMUX    Tcina                 0.212   meanSample<2>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<4>
+    SLICE_X17Y37.D4      net (fanout=30)       0.866   sumSample[11]_addrSample[10]_div_4_OUT<2>
+    SLICE_X17Y37.D       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/n0595<8>
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_n0595111
+    SLICE_X20Y33.D3      net (fanout=2)        1.014   sumSample[11]_addrSample[10]_div_4/n0595<8>
+    SLICE_X20Y33.COUT    Topcyd                0.274   sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_lutdi3
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+    SLICE_X20Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+    SLICE_X20Y34.BMUX    Tcinb                 0.268   meanSample<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<5>
+    SLICE_X15Y35.D4      net (fanout=11)       0.807   sumSample[11]_addrSample[10]_div_4_OUT<1>
+    SLICE_X15Y35.D       Tilo                  0.259   addrSample_4_1
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_n0546121
+    SLICE_X22Y35.A5      net (fanout=1)        0.684   sumSample[11]_addrSample[10]_div_4/n0546<9>
+    SLICE_X22Y35.CLK     Tas                   0.545   meanSample<0>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_lutdi4
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_cy<5>
+                                                       meanSample_0
+    -------------------------------------------------  ---------------------------
+    Total                                     22.035ns (7.309ns logic, 14.726ns route)
+                                                       (33.2% logic, 66.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -12.076ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addrSample_1_2 (FF)
+  Destination:          meanSample_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      22.032ns (Levels of Logic = 25)
+  Clock Path Skew:      -0.009ns (0.245 - 0.254)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: addrSample_1_2 to meanSample_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y35.CQ      Tcko                  0.391   addrSample_7_3
+                                                       addrSample_1_2
+    SLICE_X17Y33.C2      net (fanout=7)        0.822   addrSample_1_2
+    SLICE_X17Y33.C       Tilo                  0.259   N350
+                                                       sumSample[11]_addrSample[10]_div_4/o<10>21_SW4
+    SLICE_X21Y37.B2      net (fanout=1)        1.171   N350
+    SLICE_X21Y37.B       Tilo                  0.259   N430
+                                                       sumSample[11]_addrSample[10]_div_4/o<8>1_SW1
+    SLICE_X22Y37.B2      net (fanout=4)        0.649   N102
+    SLICE_X22Y37.B       Tilo                  0.205   N413
+                                                       sumSample[11]_addrSample[10]_div_4/o<9>2_SW5
+    SLICE_X16Y38.B6      net (fanout=3)        0.625   N413
+    SLICE_X16Y38.B       Tilo                  0.203   meanSample<3>
+                                                       sumSample[11]_addrSample[10]_div_4/o<8>1
+    SLICE_X21Y38.A6      net (fanout=17)       0.754   sumSample[11]_addrSample[10]_div_4/o<8>1
+    SLICE_X21Y38.A       Tilo                  0.259   N149
+                                                       sumSample[11]_addrSample[10]_div_4/o<7>2_SW4_SW0
+    SLICE_X21Y39.A6      net (fanout=1)        0.279   N443
+    SLICE_X21Y39.A       Tilo                  0.259   N465
+                                                       sumSample[11]_addrSample[10]_div_4/o<7>2_SW4
+    SLICE_X21Y39.B6      net (fanout=1)        0.118   N333
+    SLICE_X21Y39.B       Tilo                  0.259   N465
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_249_o191
+    SLICE_X14Y39.BX      net (fanout=2)        1.042   sumSample[11]_addrSample[10]_div_4/a[7]_GND_2_o_MUX_242_o
+    SLICE_X14Y39.CMUX    Taxc                  0.317   sumSample[11]_addrSample[10]_div_4/Madd_GND_2_o_b[10]_add_13_OUT_Madd_Madd_cy<9>
+                                                       sumSample[11]_addrSample[10]_div_4/Madd_GND_2_o_b[10]_add_13_OUT_Madd_Madd_cy<9>
+    SLICE_X13Y37.A3      net (fanout=3)        0.708   sumSample[11]_addrSample[10]_div_4/GND_2_o_b[10]_add_13_OUT<8>
+    SLICE_X13Y37.A       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/a[8]_GND_2_o_MUX_241_o
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_283_o1101
+    SLICE_X12Y33.B5      net (fanout=5)        0.720   sumSample[11]_addrSample[10]_div_4/a[8]_GND_2_o_MUX_275_o
+    SLICE_X12Y33.COUT    Topcyb                0.380   sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_lut<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+    SLICE_X12Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+    SLICE_X12Y34.AMUX    Tcina                 0.212   meanSample<5>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<4>
+    SLICE_X15Y39.D5      net (fanout=27)       0.725   sumSample[11]_addrSample[10]_div_4_OUT<5>
+    SLICE_X15Y39.D       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/a[10]_GND_2_o_MUX_305_o
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_315_o112
+    SLICE_X14Y33.D4      net (fanout=4)        0.799   sumSample[11]_addrSample[10]_div_4/a[10]_GND_2_o_MUX_305_o
+    SLICE_X14Y33.COUT    Topcyd                0.281   sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_lutdi3
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+    SLICE_X14Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+    SLICE_X14Y34.AMUX    Tcina                 0.194   meanSample<4>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<4>
+    SLICE_X17Y37.A4      net (fanout=32)       0.760   sumSample[11]_addrSample[10]_div_4_OUT<4>
+    SLICE_X17Y37.A       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/n0595<8>
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_345_o112
+    SLICE_X16Y37.D5      net (fanout=4)        0.628   sumSample[11]_addrSample[10]_div_4/a[10]_GND_2_o_MUX_335_o
+    SLICE_X16Y37.COUT    Topcyd                0.274   sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_lutdi3
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+    SLICE_X16Y38.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+    SLICE_X16Y38.AMUX    Tcina                 0.212   meanSample<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<4>
+    SLICE_X17Y33.A4      net (fanout=36)       0.737   sumSample[11]_addrSample[10]_div_4_OUT<3>
+    SLICE_X17Y33.A       Tilo                  0.259   N350
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_373_o171
+    SLICE_X20Y35.B5      net (fanout=3)        0.919   sumSample[11]_addrSample[10]_div_4/a[5]_GND_2_o_MUX_368_o
+    SLICE_X20Y35.COUT    Topcyb                0.380   sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_lut<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+    SLICE_X20Y36.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+    SLICE_X20Y36.AMUX    Tcina                 0.212   meanSample<2>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<4>
+    SLICE_X17Y37.D4      net (fanout=30)       0.866   sumSample[11]_addrSample[10]_div_4_OUT<2>
+    SLICE_X17Y37.D       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/n0595<8>
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_n0595111
+    SLICE_X20Y33.D3      net (fanout=2)        1.014   sumSample[11]_addrSample[10]_div_4/n0595<8>
+    SLICE_X20Y33.COUT    Topcyd                0.274   sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_lutdi3
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+    SLICE_X20Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+    SLICE_X20Y34.BMUX    Tcinb                 0.268   meanSample<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<5>
+    SLICE_X15Y35.D4      net (fanout=11)       0.807   sumSample[11]_addrSample[10]_div_4_OUT<1>
+    SLICE_X15Y35.D       Tilo                  0.259   addrSample_4_1
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_n0546121
+    SLICE_X22Y35.A5      net (fanout=1)        0.684   sumSample[11]_addrSample[10]_div_4/n0546<9>
+    SLICE_X22Y35.CLK     Tas                   0.538   meanSample<0>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_lut<4>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_cy<5>
+                                                       meanSample_0
+    -------------------------------------------------  ---------------------------
+    Total                                     22.032ns (7.190ns logic, 14.842ns route)
+                                                       (32.6% logic, 67.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point meanSample_0 (SLICE_X22Y35.B4), 366535227184 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -11.822ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addrSample_1_2 (FF)
+  Destination:          meanSample_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      21.778ns (Levels of Logic = 25)
+  Clock Path Skew:      -0.009ns (0.245 - 0.254)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: addrSample_1_2 to meanSample_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y35.CQ      Tcko                  0.391   addrSample_7_3
+                                                       addrSample_1_2
+    SLICE_X17Y33.C2      net (fanout=7)        0.822   addrSample_1_2
+    SLICE_X17Y33.C       Tilo                  0.259   N350
+                                                       sumSample[11]_addrSample[10]_div_4/o<10>21_SW4
+    SLICE_X21Y37.B2      net (fanout=1)        1.171   N350
+    SLICE_X21Y37.B       Tilo                  0.259   N430
+                                                       sumSample[11]_addrSample[10]_div_4/o<8>1_SW1
+    SLICE_X22Y37.B2      net (fanout=4)        0.649   N102
+    SLICE_X22Y37.B       Tilo                  0.205   N413
+                                                       sumSample[11]_addrSample[10]_div_4/o<9>2_SW5
+    SLICE_X16Y38.B6      net (fanout=3)        0.625   N413
+    SLICE_X16Y38.B       Tilo                  0.203   meanSample<3>
+                                                       sumSample[11]_addrSample[10]_div_4/o<8>1
+    SLICE_X21Y38.A6      net (fanout=17)       0.754   sumSample[11]_addrSample[10]_div_4/o<8>1
+    SLICE_X21Y38.A       Tilo                  0.259   N149
+                                                       sumSample[11]_addrSample[10]_div_4/o<7>2_SW4_SW0
+    SLICE_X21Y39.A6      net (fanout=1)        0.279   N443
+    SLICE_X21Y39.A       Tilo                  0.259   N465
+                                                       sumSample[11]_addrSample[10]_div_4/o<7>2_SW4
+    SLICE_X21Y39.B6      net (fanout=1)        0.118   N333
+    SLICE_X21Y39.B       Tilo                  0.259   N465
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_249_o191
+    SLICE_X14Y39.BX      net (fanout=2)        1.042   sumSample[11]_addrSample[10]_div_4/a[7]_GND_2_o_MUX_242_o
+    SLICE_X14Y39.CMUX    Taxc                  0.317   sumSample[11]_addrSample[10]_div_4/Madd_GND_2_o_b[10]_add_13_OUT_Madd_Madd_cy<9>
+                                                       sumSample[11]_addrSample[10]_div_4/Madd_GND_2_o_b[10]_add_13_OUT_Madd_Madd_cy<9>
+    SLICE_X13Y37.A3      net (fanout=3)        0.708   sumSample[11]_addrSample[10]_div_4/GND_2_o_b[10]_add_13_OUT<8>
+    SLICE_X13Y37.A       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/a[8]_GND_2_o_MUX_241_o
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_283_o1101
+    SLICE_X12Y33.B5      net (fanout=5)        0.720   sumSample[11]_addrSample[10]_div_4/a[8]_GND_2_o_MUX_275_o
+    SLICE_X12Y33.COUT    Topcyb                0.380   sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_lut<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+    SLICE_X12Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+    SLICE_X12Y34.AMUX    Tcina                 0.212   meanSample<5>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<4>
+    SLICE_X15Y39.D5      net (fanout=27)       0.725   sumSample[11]_addrSample[10]_div_4_OUT<5>
+    SLICE_X15Y39.D       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/a[10]_GND_2_o_MUX_305_o
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_315_o112
+    SLICE_X14Y33.D4      net (fanout=4)        0.799   sumSample[11]_addrSample[10]_div_4/a[10]_GND_2_o_MUX_305_o
+    SLICE_X14Y33.COUT    Topcyd                0.281   sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_lutdi3
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+    SLICE_X14Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+    SLICE_X14Y34.AMUX    Tcina                 0.194   meanSample<4>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<4>
+    SLICE_X17Y37.A4      net (fanout=32)       0.760   sumSample[11]_addrSample[10]_div_4_OUT<4>
+    SLICE_X17Y37.A       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/n0595<8>
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_345_o112
+    SLICE_X16Y37.D5      net (fanout=4)        0.628   sumSample[11]_addrSample[10]_div_4/a[10]_GND_2_o_MUX_335_o
+    SLICE_X16Y37.COUT    Topcyd                0.274   sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_lutdi3
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+    SLICE_X16Y38.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+    SLICE_X16Y38.AMUX    Tcina                 0.212   meanSample<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<4>
+    SLICE_X17Y33.A4      net (fanout=36)       0.737   sumSample[11]_addrSample[10]_div_4_OUT<3>
+    SLICE_X17Y33.A       Tilo                  0.259   N350
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_373_o171
+    SLICE_X20Y35.B5      net (fanout=3)        0.919   sumSample[11]_addrSample[10]_div_4/a[5]_GND_2_o_MUX_368_o
+    SLICE_X20Y35.COUT    Topcyb                0.380   sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_lut<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+    SLICE_X20Y36.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+    SLICE_X20Y36.AMUX    Tcina                 0.212   meanSample<2>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<4>
+    SLICE_X17Y37.D4      net (fanout=30)       0.866   sumSample[11]_addrSample[10]_div_4_OUT<2>
+    SLICE_X17Y37.D       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/n0595<8>
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_n0595111
+    SLICE_X20Y33.D3      net (fanout=2)        1.014   sumSample[11]_addrSample[10]_div_4/n0595<8>
+    SLICE_X20Y33.COUT    Topcyd                0.274   sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_lutdi3
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+    SLICE_X20Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+    SLICE_X20Y34.BMUX    Tcinb                 0.268   meanSample<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<5>
+    SLICE_X20Y36.C2      net (fanout=11)       0.833   sumSample[11]_addrSample[10]_div_4_OUT<1>
+    SLICE_X20Y36.C       Tilo                  0.204   meanSample<2>
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_n054621
+    SLICE_X22Y35.B4      net (fanout=1)        0.488   sumSample[11]_addrSample[10]_div_4/n0546<10>
+    SLICE_X22Y35.CLK     Tas                   0.509   meanSample<0>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_lut<5>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_cy<5>
+                                                       meanSample_0
+    -------------------------------------------------  ---------------------------
+    Total                                     21.778ns (7.106ns logic, 14.672ns route)
+                                                       (32.6% logic, 67.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -11.818ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addrSample_1_2 (FF)
+  Destination:          meanSample_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      21.774ns (Levels of Logic = 25)
+  Clock Path Skew:      -0.009ns (0.245 - 0.254)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: addrSample_1_2 to meanSample_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y35.CQ      Tcko                  0.391   addrSample_7_3
+                                                       addrSample_1_2
+    SLICE_X17Y33.C2      net (fanout=7)        0.822   addrSample_1_2
+    SLICE_X17Y33.C       Tilo                  0.259   N350
+                                                       sumSample[11]_addrSample[10]_div_4/o<10>21_SW4
+    SLICE_X21Y37.B2      net (fanout=1)        1.171   N350
+    SLICE_X21Y37.B       Tilo                  0.259   N430
+                                                       sumSample[11]_addrSample[10]_div_4/o<8>1_SW1
+    SLICE_X22Y37.B2      net (fanout=4)        0.649   N102
+    SLICE_X22Y37.B       Tilo                  0.205   N413
+                                                       sumSample[11]_addrSample[10]_div_4/o<9>2_SW5
+    SLICE_X16Y38.B6      net (fanout=3)        0.625   N413
+    SLICE_X16Y38.B       Tilo                  0.203   meanSample<3>
+                                                       sumSample[11]_addrSample[10]_div_4/o<8>1
+    SLICE_X21Y38.A6      net (fanout=17)       0.754   sumSample[11]_addrSample[10]_div_4/o<8>1
+    SLICE_X21Y38.A       Tilo                  0.259   N149
+                                                       sumSample[11]_addrSample[10]_div_4/o<7>2_SW4_SW0
+    SLICE_X21Y39.A6      net (fanout=1)        0.279   N443
+    SLICE_X21Y39.A       Tilo                  0.259   N465
+                                                       sumSample[11]_addrSample[10]_div_4/o<7>2_SW4
+    SLICE_X21Y39.B6      net (fanout=1)        0.118   N333
+    SLICE_X21Y39.B       Tilo                  0.259   N465
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_249_o191
+    SLICE_X14Y39.BX      net (fanout=2)        1.042   sumSample[11]_addrSample[10]_div_4/a[7]_GND_2_o_MUX_242_o
+    SLICE_X14Y39.CMUX    Taxc                  0.317   sumSample[11]_addrSample[10]_div_4/Madd_GND_2_o_b[10]_add_13_OUT_Madd_Madd_cy<9>
+                                                       sumSample[11]_addrSample[10]_div_4/Madd_GND_2_o_b[10]_add_13_OUT_Madd_Madd_cy<9>
+    SLICE_X13Y37.A3      net (fanout=3)        0.708   sumSample[11]_addrSample[10]_div_4/GND_2_o_b[10]_add_13_OUT<8>
+    SLICE_X13Y37.A       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/a[8]_GND_2_o_MUX_241_o
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_283_o1101
+    SLICE_X12Y33.B5      net (fanout=5)        0.720   sumSample[11]_addrSample[10]_div_4/a[8]_GND_2_o_MUX_275_o
+    SLICE_X12Y33.COUT    Topcyb                0.380   sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_lut<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+    SLICE_X12Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+    SLICE_X12Y34.AMUX    Tcina                 0.212   meanSample<5>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<4>
+    SLICE_X15Y39.D5      net (fanout=27)       0.725   sumSample[11]_addrSample[10]_div_4_OUT<5>
+    SLICE_X15Y39.D       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/a[10]_GND_2_o_MUX_305_o
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_315_o112
+    SLICE_X14Y33.D4      net (fanout=4)        0.799   sumSample[11]_addrSample[10]_div_4/a[10]_GND_2_o_MUX_305_o
+    SLICE_X14Y33.COUT    Topcyd                0.281   sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_lutdi3
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+    SLICE_X14Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+    SLICE_X14Y34.AMUX    Tcina                 0.194   meanSample<4>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<4>
+    SLICE_X19Y33.B6      net (fanout=32)       0.628   sumSample[11]_addrSample[10]_div_4_OUT<4>
+    SLICE_X19Y33.B       Tilo                  0.259   N433
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_345_o161
+    SLICE_X16Y37.A5      net (fanout=4)        0.644   sumSample[11]_addrSample[10]_div_4/a[4]_GND_2_o_MUX_341_o
+    SLICE_X16Y37.COUT    Topcya                0.386   sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_lutdi
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+    SLICE_X16Y38.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+    SLICE_X16Y38.AMUX    Tcina                 0.212   meanSample<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<4>
+    SLICE_X17Y33.A4      net (fanout=36)       0.737   sumSample[11]_addrSample[10]_div_4_OUT<3>
+    SLICE_X17Y33.A       Tilo                  0.259   N350
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_373_o171
+    SLICE_X20Y35.B5      net (fanout=3)        0.919   sumSample[11]_addrSample[10]_div_4/a[5]_GND_2_o_MUX_368_o
+    SLICE_X20Y35.COUT    Topcyb                0.380   sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_lut<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+    SLICE_X20Y36.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+    SLICE_X20Y36.AMUX    Tcina                 0.212   meanSample<2>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<4>
+    SLICE_X17Y37.D4      net (fanout=30)       0.866   sumSample[11]_addrSample[10]_div_4_OUT<2>
+    SLICE_X17Y37.D       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/n0595<8>
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_n0595111
+    SLICE_X20Y33.D3      net (fanout=2)        1.014   sumSample[11]_addrSample[10]_div_4/n0595<8>
+    SLICE_X20Y33.COUT    Topcyd                0.274   sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_lutdi3
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+    SLICE_X20Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+    SLICE_X20Y34.BMUX    Tcinb                 0.268   meanSample<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<5>
+    SLICE_X20Y36.C2      net (fanout=11)       0.833   sumSample[11]_addrSample[10]_div_4_OUT<1>
+    SLICE_X20Y36.C       Tilo                  0.204   meanSample<2>
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_n054621
+    SLICE_X22Y35.B4      net (fanout=1)        0.488   sumSample[11]_addrSample[10]_div_4/n0546<10>
+    SLICE_X22Y35.CLK     Tas                   0.509   meanSample<0>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_lut<5>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_cy<5>
+                                                       meanSample_0
+    -------------------------------------------------  ---------------------------
+    Total                                     21.774ns (7.218ns logic, 14.556ns route)
+                                                       (33.1% logic, 66.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -11.811ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               addrSample_1_2 (FF)
+  Destination:          meanSample_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      21.767ns (Levels of Logic = 25)
+  Clock Path Skew:      -0.009ns (0.245 - 0.254)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: addrSample_1_2 to meanSample_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y35.CQ      Tcko                  0.391   addrSample_7_3
+                                                       addrSample_1_2
+    SLICE_X17Y33.C2      net (fanout=7)        0.822   addrSample_1_2
+    SLICE_X17Y33.C       Tilo                  0.259   N350
+                                                       sumSample[11]_addrSample[10]_div_4/o<10>21_SW4
+    SLICE_X21Y37.B2      net (fanout=1)        1.171   N350
+    SLICE_X21Y37.B       Tilo                  0.259   N430
+                                                       sumSample[11]_addrSample[10]_div_4/o<8>1_SW1
+    SLICE_X22Y37.B2      net (fanout=4)        0.649   N102
+    SLICE_X22Y37.B       Tilo                  0.205   N413
+                                                       sumSample[11]_addrSample[10]_div_4/o<9>2_SW5
+    SLICE_X16Y38.B6      net (fanout=3)        0.625   N413
+    SLICE_X16Y38.B       Tilo                  0.203   meanSample<3>
+                                                       sumSample[11]_addrSample[10]_div_4/o<8>1
+    SLICE_X21Y38.A6      net (fanout=17)       0.754   sumSample[11]_addrSample[10]_div_4/o<8>1
+    SLICE_X21Y38.A       Tilo                  0.259   N149
+                                                       sumSample[11]_addrSample[10]_div_4/o<7>2_SW4_SW0
+    SLICE_X21Y39.A6      net (fanout=1)        0.279   N443
+    SLICE_X21Y39.A       Tilo                  0.259   N465
+                                                       sumSample[11]_addrSample[10]_div_4/o<7>2_SW4
+    SLICE_X21Y39.B6      net (fanout=1)        0.118   N333
+    SLICE_X21Y39.B       Tilo                  0.259   N465
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_249_o191
+    SLICE_X14Y39.BX      net (fanout=2)        1.042   sumSample[11]_addrSample[10]_div_4/a[7]_GND_2_o_MUX_242_o
+    SLICE_X14Y39.CMUX    Taxc                  0.317   sumSample[11]_addrSample[10]_div_4/Madd_GND_2_o_b[10]_add_13_OUT_Madd_Madd_cy<9>
+                                                       sumSample[11]_addrSample[10]_div_4/Madd_GND_2_o_b[10]_add_13_OUT_Madd_Madd_cy<9>
+    SLICE_X13Y37.A3      net (fanout=3)        0.708   sumSample[11]_addrSample[10]_div_4/GND_2_o_b[10]_add_13_OUT<8>
+    SLICE_X13Y37.A       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/a[8]_GND_2_o_MUX_241_o
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_283_o1101
+    SLICE_X12Y33.B5      net (fanout=5)        0.720   sumSample[11]_addrSample[10]_div_4/a[8]_GND_2_o_MUX_275_o
+    SLICE_X12Y33.COUT    Topcyb                0.380   sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_lut<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+    SLICE_X12Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<3>
+    SLICE_X12Y34.AMUX    Tcina                 0.212   meanSample<5>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<5>_cy<4>
+    SLICE_X15Y39.D5      net (fanout=27)       0.725   sumSample[11]_addrSample[10]_div_4_OUT<5>
+    SLICE_X15Y39.D       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/a[10]_GND_2_o_MUX_305_o
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_315_o112
+    SLICE_X14Y33.D4      net (fanout=4)        0.799   sumSample[11]_addrSample[10]_div_4/a[10]_GND_2_o_MUX_305_o
+    SLICE_X14Y33.COUT    Topcyd                0.281   sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_lutdi3
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+    SLICE_X14Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<3>
+    SLICE_X14Y34.AMUX    Tcina                 0.194   meanSample<4>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<4>_cy<4>
+    SLICE_X19Y33.B6      net (fanout=32)       0.628   sumSample[11]_addrSample[10]_div_4_OUT<4>
+    SLICE_X19Y33.B       Tilo                  0.259   N433
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_345_o161
+    SLICE_X16Y37.A5      net (fanout=4)        0.644   sumSample[11]_addrSample[10]_div_4/a[4]_GND_2_o_MUX_341_o
+    SLICE_X16Y37.COUT    Topcya                0.379   sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_lut<0>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+    SLICE_X16Y38.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<3>
+    SLICE_X16Y38.AMUX    Tcina                 0.212   meanSample<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<3>_cy<4>
+    SLICE_X17Y33.A4      net (fanout=36)       0.737   sumSample[11]_addrSample[10]_div_4_OUT<3>
+    SLICE_X17Y33.A       Tilo                  0.259   N350
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_a[0]_GND_2_o_MUX_373_o171
+    SLICE_X20Y35.B5      net (fanout=3)        0.919   sumSample[11]_addrSample[10]_div_4/a[5]_GND_2_o_MUX_368_o
+    SLICE_X20Y35.COUT    Topcyb                0.380   sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_lut<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+    SLICE_X20Y36.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<3>
+    SLICE_X20Y36.AMUX    Tcina                 0.212   meanSample<2>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<2>_cy<4>
+    SLICE_X17Y37.D4      net (fanout=30)       0.866   sumSample[11]_addrSample[10]_div_4_OUT<2>
+    SLICE_X17Y37.D       Tilo                  0.259   sumSample[11]_addrSample[10]_div_4/n0595<8>
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_n0595111
+    SLICE_X20Y33.D3      net (fanout=2)        1.014   sumSample[11]_addrSample[10]_div_4/n0595<8>
+    SLICE_X20Y33.COUT    Topcyd                0.274   sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_lutdi3
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+    SLICE_X20Y34.CIN     net (fanout=1)        0.003   sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<3>
+    SLICE_X20Y34.BMUX    Tcinb                 0.268   meanSample<1>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<1>_cy<5>
+    SLICE_X20Y36.C2      net (fanout=11)       0.833   sumSample[11]_addrSample[10]_div_4_OUT<1>
+    SLICE_X20Y36.C       Tilo                  0.204   meanSample<2>
+                                                       sumSample[11]_addrSample[10]_div_4/Mmux_n054621
+    SLICE_X22Y35.B4      net (fanout=1)        0.488   sumSample[11]_addrSample[10]_div_4/n0546<10>
+    SLICE_X22Y35.CLK     Tas                   0.509   meanSample<0>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_lut<5>
+                                                       sumSample[11]_addrSample[10]_div_4/Mcompar_o<0>_cy<5>
+                                                       meanSample_0
+    -------------------------------------------------  ---------------------------
+    Total                                     21.767ns (7.211ns logic, 14.556ns route)
+                                                       (33.1% logic, 66.9% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clk = PERIOD TIMEGRP "clk" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram (RAMB16_X0Y18.DIA0), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.299ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               DTW_Matrix_Element_8 (FF)
+  Destination:          DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.302ns (Levels of Logic = 0)
+  Clock Path Skew:      0.003ns (0.112 - 0.109)
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: DTW_Matrix_Element_8 to DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y37.AQ       Tcko                  0.200   DTW_Matrix_Element<11>
+                                                       DTW_Matrix_Element_8
+    RAMB16_X0Y18.DIA0    net (fanout=2)        0.155   DTW_Matrix_Element<8>
+    RAMB16_X0Y18.CLKA    Trckd_DIA   (-Th)     0.053   DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram
+                                                       DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram
+    -------------------------------------------------  ---------------------------
+    Total                                      0.302ns (0.147ns logic, 0.155ns route)
+                                                       (48.7% logic, 51.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram (RAMB16_X0Y18.DIA3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.368ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               DTW_Matrix_Element_11 (FF)
+  Destination:          DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.371ns (Levels of Logic = 0)
+  Clock Path Skew:      0.003ns (0.112 - 0.109)
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: DTW_Matrix_Element_11 to DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y37.DQ       Tcko                  0.200   DTW_Matrix_Element<11>
+                                                       DTW_Matrix_Element_11
+    RAMB16_X0Y18.DIA3    net (fanout=2)        0.224   DTW_Matrix_Element<11>
+    RAMB16_X0Y18.CLKA    Trckd_DIA   (-Th)     0.053   DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram
+                                                       DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram
+    -------------------------------------------------  ---------------------------
+    Total                                      0.371ns (0.147ns logic, 0.224ns route)
+                                                       (39.6% logic, 60.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram (RAMB16_X0Y18.DIA2), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.385ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               DTW_Matrix_Element_10 (FF)
+  Destination:          DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.388ns (Levels of Logic = 0)
+  Clock Path Skew:      0.003ns (0.112 - 0.109)
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: DTW_Matrix_Element_10 to DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y37.CQ       Tcko                  0.200   DTW_Matrix_Element<11>
+                                                       DTW_Matrix_Element_10
+    RAMB16_X0Y18.DIA2    net (fanout=2)        0.241   DTW_Matrix_Element<10>
+    RAMB16_X0Y18.CLKA    Trckd_DIA   (-Th)     0.053   DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram
+                                                       DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram
+    -------------------------------------------------  ---------------------------
+    Total                                      0.388ns (0.147ns logic, 0.241ns route)
+                                                       (37.9% logic, 62.1% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk = PERIOD TIMEGRP "clk" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 6.876ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
+  Physical resource: Sample_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram/CLKA
+  Logical resource: Sample_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram/CLKA
+  Location pin: RAMB16_X0Y14.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 6.876ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
+  Physical resource: Test_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram/CLKA
+  Logical resource: Test_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram/CLKA
+  Location pin: RAMB16_X0Y10.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 6.876ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
+  Physical resource: DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram/CLKA
+  Logical resource: DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram/CLKA
+  Location pin: RAMB16_X0Y18.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+1 constraint not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   22.403|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 31  Score: 251691  (Setup/Max: 251691, Hold: 0)
+
+Constraints cover 6453998614541 paths, 0 nets, and 5253 connections
+
+Design statistics:
+   Minimum period:  22.403ns{1}   (Maximum frequency:  44.637MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Wed Feb 02 15:58:23 2022 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4591 MB
+
+
+

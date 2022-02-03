@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "E:/Bachlor_Project/Verilog DTW Full Implementation 4/DTWmain/TestBench_DTW_Full_isim_beh.exe" -prj "E:/Bachlor_Project/Verilog DTW Full Implementation 4/DTWmain/TestBench_DTW_Full_beh.prj" "work.TestBench_DTW_Full" "work.glbl" 

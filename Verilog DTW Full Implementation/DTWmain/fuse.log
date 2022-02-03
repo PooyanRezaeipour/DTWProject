@@ -1,0 +1,33 @@
+Running: F:\xilings\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o E:/Bachlor_Project/Verilog DTW Full Implementation 4/DTWmain/TestBench_DTW_Full_isim_beh.exe -prj E:/Bachlor_Project/Verilog DTW Full Implementation 4/DTWmain/TestBench_DTW_Full_beh.prj work.TestBench_DTW_Full work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/Bachlor_Project/Verilog DTW Full Implementation 4/DTWmain/ipcore_dir/Ram_Test.v" into library work
+Analyzing Verilog file "E:/Bachlor_Project/Verilog DTW Full Implementation 4/DTWmain/ipcore_dir/Ram_Sample.v" into library work
+Analyzing Verilog file "E:/Bachlor_Project/Verilog DTW Full Implementation 4/DTWmain/ipcore_dir/DTW_Matrix.v" into library work
+Analyzing Verilog file "E:/Bachlor_Project/Verilog DTW Full Implementation 4/DTWmain/DTWmadule.v" into library work
+Analyzing Verilog file "E:/Bachlor_Project/Verilog DTW Full Implementation 4/DTWmain/TestBench_DTW_Full.v" into library work
+Analyzing Verilog file "F:/xilings/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="spart...
+Compiling module DTW_Matrix
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="spart...
+Compiling module Ram_Test
+Compiling module Ram_Sample
+Compiling module DTWmadule
+Compiling module TestBench_DTW_Full
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 14 Verilog Units
+Built simulation executable E:/Bachlor_Project/Verilog DTW Full Implementation 4/DTWmain/TestBench_DTW_Full_isim_beh.exe
+Fuse Memory Usage: 33772 KB
+Fuse CPU Usage: 999 ms

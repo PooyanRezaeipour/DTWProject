@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="E:/Bachlor_Project/Verilog DTW Full Implementation 4/DTWmain/TestBench_DTW_Full_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="TestBench_DTW_Full" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="46" />
+   <wvobject fp_name="/TestBench_DTW_Full/valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/Out_Euclidean_Distatnce" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Out_Euclidean_Distatnce[5:0]</obj_property>
+      <obj_property name="ObjectShortName">Out_Euclidean_Distatnce[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/InSample" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">InSample[3:0]</obj_property>
+      <obj_property name="ObjectShortName">InSample[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/InTest" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">InTest[3:0]</obj_property>
+      <obj_property name="ObjectShortName">InTest[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/Start" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Start</obj_property>
+      <obj_property name="ObjectShortName">Start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/StartReceiveSample" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">StartReceiveSample</obj_property>
+      <obj_property name="ObjectShortName">StartReceiveSample</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/StartReceiveTest" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">StartReceiveTest</obj_property>
+      <obj_property name="ObjectShortName">StartReceiveTest</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/Sample" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Sample[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Sample[3:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/weaSample" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">weaSample</obj_property>
+      <obj_property name="ObjectShortName">weaSample</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/regSample" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regSample[3:0]</obj_property>
+      <obj_property name="ObjectShortName">regSample[3:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/addrSample" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addrSample[5:0]</obj_property>
+      <obj_property name="ObjectShortName">addrSample[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/Test" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Test[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Test[3:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/weaTest" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">weaTest</obj_property>
+      <obj_property name="ObjectShortName">weaTest</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/regTest" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regTest[3:0]</obj_property>
+      <obj_property name="ObjectShortName">regTest[3:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/addrTest" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addrTest[5:0]</obj_property>
+      <obj_property name="ObjectShortName">addrTest[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/start_read_mins" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">start_read_mins</obj_property>
+      <obj_property name="ObjectShortName">start_read_mins</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/valid_temp" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">valid_temp</obj_property>
+      <obj_property name="ObjectShortName">valid_temp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/valid_min" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">valid_min</obj_property>
+      <obj_property name="ObjectShortName">valid_min</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/valid_Element" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">valid_Element</obj_property>
+      <obj_property name="ObjectShortName">valid_Element</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/active_Sample" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">active_Sample</obj_property>
+      <obj_property name="ObjectShortName">active_Sample</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/waitForMin" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">waitForMin[2:0]</obj_property>
+      <obj_property name="ObjectShortName">waitForMin[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/min" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">min[5:0]</obj_property>
+      <obj_property name="ObjectShortName">min[5:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/temp" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">temp[2:0,5:0]</obj_property>
+      <obj_property name="ObjectShortName">temp[2:0,5:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/startFlag" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">startFlag</obj_property>
+      <obj_property name="ObjectShortName">startFlag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/addrMatrixDTW" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addrMatrixDTW[6:0]</obj_property>
+      <obj_property name="ObjectShortName">addrMatrixDTW[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/wea_DTW_Matrix" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wea_DTW_Matrix</obj_property>
+      <obj_property name="ObjectShortName">wea_DTW_Matrix</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/DTW_Matrix_Element" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">DTW_Matrix_Element[5:0]</obj_property>
+      <obj_property name="ObjectShortName">DTW_Matrix_Element[5:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/finish" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">finish</obj_property>
+      <obj_property name="ObjectShortName">finish</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/count_DTW_matrix_write" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">count_DTW_matrix_write[5:0]</obj_property>
+      <obj_property name="ObjectShortName">count_DTW_matrix_write[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/numSample" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">numSample[9:0]</obj_property>
+      <obj_property name="ObjectShortName">numSample[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/numTest" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">numTest[9:0]</obj_property>
+      <obj_property name="ObjectShortName">numTest[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/maxNumDTW" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">maxNumDTW[10:0]</obj_property>
+      <obj_property name="ObjectShortName">maxNumDTW[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/sumSample" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sumSample[10:0]</obj_property>
+      <obj_property name="ObjectShortName">sumSample[10:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/sumTest" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sumTest[10:0]</obj_property>
+      <obj_property name="ObjectShortName">sumTest[10:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/flagDTWMatrix" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">flagDTWMatrix</obj_property>
+      <obj_property name="ObjectShortName">flagDTWMatrix</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/meanSample" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">meanSample[7:0]</obj_property>
+      <obj_property name="ObjectShortName">meanSample[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/meanTest" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">meanTest[7:0]</obj_property>
+      <obj_property name="ObjectShortName">meanTest[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/flagReceivingSample" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">flagReceivingSample</obj_property>
+      <obj_property name="ObjectShortName">flagReceivingSample</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/flagReceivingTest" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">flagReceivingTest</obj_property>
+      <obj_property name="ObjectShortName">flagReceivingTest</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/startNormSample" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">startNormSample</obj_property>
+      <obj_property name="ObjectShortName">startNormSample</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/startNormTest" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">startNormTest</obj_property>
+      <obj_property name="ObjectShortName">startNormTest</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/countSampleNorm" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">countSampleNorm[2:0]</obj_property>
+      <obj_property name="ObjectShortName">countSampleNorm[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/countTestNorm" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">countTestNorm[2:0]</obj_property>
+      <obj_property name="ObjectShortName">countTestNorm[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/finishNormTest" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">finishNormTest</obj_property>
+      <obj_property name="ObjectShortName">finishNormTest</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestBench_DTW_Full/uut/finishNormSample" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">finishNormSample</obj_property>
+      <obj_property name="ObjectShortName">finishNormSample</obj_property>
+   </wvobject>
+</wave_config>

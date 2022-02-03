@@ -1,0 +1,4 @@
+verilog work "ipcore_dir/Ram_Test.v"
+verilog work "ipcore_dir/Ram_Sample.v"
+verilog work "ipcore_dir/DTW_Matrix.v"
+verilog work "DTWmadule.v"

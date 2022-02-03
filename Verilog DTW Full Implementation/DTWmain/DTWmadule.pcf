@@ -1,0 +1,158 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Feb 02 15:57:41 2022
+//! **************************************************************************
+
+SCHEMATIC START;
+PIN Mmult_n0457_pins<92> = BEL "Mmult_n0457" PINNAME CLK;
+PIN
+        DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram_pins<28>
+        = BEL
+        "DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram_pins<28>
+        = BEL
+        "DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram_pins<28>
+        = BEL
+        "DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        Test_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM9.ram_pins<26>
+        = BEL
+        "Test_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM9.ram"
+        PINNAME CLKAWRCLK;
+PIN
+        Test_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram_pins<28>
+        = BEL
+        "Test_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        Sample_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM9.ram_pins<26>
+        = BEL
+        "Sample_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM9.ram"
+        PINNAME CLKAWRCLK;
+PIN
+        Sample_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram_pins<28>
+        = BEL
+        "Sample_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram"
+        PINNAME CLKA;
+TIMEGRP clk = BEL "valid_Element" BEL "startNormSample" BEL "startNormTest"
+        BEL "valid" BEL "temp_0_0" BEL "temp_0_1" BEL "temp_0_2" BEL
+        "temp_0_3" BEL "temp_0_4" BEL "temp_0_5" BEL "temp_0_6" BEL "temp_0_7"
+        BEL "temp_0_8" BEL "temp_0_9" BEL "temp_0_10" BEL "temp_0_11" BEL
+        "temp_0_12" BEL "temp_0_13" BEL "temp_0_14" BEL "temp_0_15" BEL
+        "temp_0_16" BEL "temp_0_17" BEL "temp_0_18" BEL "temp_0_19" BEL
+        "temp_0_20" BEL "temp_0_21" BEL "temp_0_22" BEL "temp_0_23" BEL
+        "temp_0_24" BEL "temp_0_25" BEL "temp_0_26" BEL "temp_0_27" BEL
+        "temp_0_28" BEL "temp_0_29" BEL "temp_0_30" BEL "temp_0_31" BEL
+        "temp_0_32" BEL "temp_0_33" BEL "temp_0_34" BEL "temp_0_35" BEL
+        "waitForMin_0" BEL "waitForMin_1" BEL "waitForMin_2" BEL "min_0" BEL
+        "min_1" BEL "min_2" BEL "min_3" BEL "min_4" BEL "min_5" BEL "min_6"
+        BEL "min_7" BEL "min_8" BEL "min_9" BEL "min_10" BEL "min_11" BEL
+        "addrSample_1" BEL "addrSample_2" BEL "addrSample_3" BEL
+        "addrSample_4" BEL "addrSample_5" BEL "addrSample_6" BEL
+        "addrSample_7" BEL "addrSample_8" BEL "addrSample_9" BEL
+        "addrSample_10" BEL "addrTest_1" BEL "addrTest_2" BEL "addrTest_3" BEL
+        "addrTest_4" BEL "addrTest_5" BEL "addrTest_6" BEL "addrTest_7" BEL
+        "addrTest_8" BEL "addrTest_9" BEL "addrTest_10" BEL "numSample_0" BEL
+        "numSample_1" BEL "numSample_2" BEL "numSample_3" BEL "numSample_4"
+        BEL "numSample_5" BEL "numSample_6" BEL "numSample_7" BEL
+        "numSample_8" BEL "numSample_9" BEL "numSample_10" BEL "numTest_0" BEL
+        "numTest_1" BEL "numTest_2" BEL "numTest_3" BEL "numTest_4" BEL
+        "numTest_5" BEL "numTest_6" BEL "numTest_7" BEL "numTest_8" BEL
+        "numTest_9" BEL "numTest_10" BEL "meanSample_0" BEL "meanSample_1" BEL
+        "meanSample_2" BEL "meanSample_3" BEL "meanSample_4" BEL
+        "meanSample_5" BEL "meanSample_6" BEL "meanSample_7" BEL
+        "meanSample_8" BEL "meanSample_9" BEL "meanSample_10" BEL
+        "meanSample_11" BEL "meanTest_0" BEL "meanTest_1" BEL "meanTest_2" BEL
+        "meanTest_3" BEL "meanTest_4" BEL "meanTest_5" BEL "meanTest_6" BEL
+        "meanTest_7" BEL "meanTest_8" BEL "meanTest_9" BEL "meanTest_10" BEL
+        "meanTest_11" BEL "maxNumDTW_0" BEL "maxNumDTW_1" BEL "maxNumDTW_2"
+        BEL "maxNumDTW_3" BEL "maxNumDTW_4" BEL "maxNumDTW_5" BEL
+        "maxNumDTW_6" BEL "maxNumDTW_7" BEL "maxNumDTW_8" BEL "maxNumDTW_9"
+        BEL "maxNumDTW_10" BEL "maxNumDTW_11" BEL "flagDTWMatrix" BEL
+        "weaSample" BEL "weaTest" BEL "regSample_0" BEL "regSample_1" BEL
+        "regSample_2" BEL "regSample_3" BEL "regSample_4" BEL "regSample_5"
+        BEL "regSample_6" BEL "regSample_7" BEL "regSample_8" BEL
+        "regSample_9" BEL "regSample_10" BEL "regSample_11" BEL "regTest_0"
+        BEL "regTest_1" BEL "regTest_2" BEL "regTest_3" BEL "regTest_4" BEL
+        "regTest_5" BEL "regTest_6" BEL "regTest_7" BEL "regTest_8" BEL
+        "regTest_9" BEL "regTest_10" BEL "regTest_11" BEL
+        "count_DTW_matrix_write_0" BEL "count_DTW_matrix_write_1" BEL
+        "count_DTW_matrix_write_2" BEL "count_DTW_matrix_write_3" BEL
+        "count_DTW_matrix_write_4" BEL "count_DTW_matrix_write_5" BEL
+        "count_DTW_matrix_write_6" BEL "count_DTW_matrix_write_7" BEL
+        "count_DTW_matrix_write_8" BEL "count_DTW_matrix_write_9" BEL
+        "count_DTW_matrix_write_10" BEL "count_DTW_matrix_write_11" BEL
+        "DTW_Matrix_Element_0" BEL "DTW_Matrix_Element_1" BEL
+        "DTW_Matrix_Element_2" BEL "DTW_Matrix_Element_3" BEL
+        "DTW_Matrix_Element_4" BEL "DTW_Matrix_Element_5" BEL
+        "DTW_Matrix_Element_6" BEL "DTW_Matrix_Element_7" BEL
+        "DTW_Matrix_Element_8" BEL "DTW_Matrix_Element_9" BEL
+        "DTW_Matrix_Element_10" BEL "DTW_Matrix_Element_11" BEL
+        "addrMatrixDTW_0" BEL "addrMatrixDTW_1" BEL "addrMatrixDTW_2" BEL
+        "addrMatrixDTW_3" BEL "addrMatrixDTW_4" BEL "addrMatrixDTW_5" BEL
+        "addrMatrixDTW_6" BEL "addrMatrixDTW_7" BEL "addrMatrixDTW_8" BEL
+        "addrMatrixDTW_9" BEL "addrMatrixDTW_10" BEL "addrMatrixDTW_11" BEL
+        "Out_Euclidean_Distatnce_0" BEL "Out_Euclidean_Distatnce_1" BEL
+        "Out_Euclidean_Distatnce_2" BEL "Out_Euclidean_Distatnce_3" BEL
+        "Out_Euclidean_Distatnce_4" BEL "Out_Euclidean_Distatnce_5" BEL
+        "Out_Euclidean_Distatnce_6" BEL "Out_Euclidean_Distatnce_7" BEL
+        "Out_Euclidean_Distatnce_8" BEL "Out_Euclidean_Distatnce_9" BEL
+        "Out_Euclidean_Distatnce_10" BEL "Out_Euclidean_Distatnce_11" PIN
+        "Mmult_n0457_pins<92>" BEL "countSampleNorm_0" BEL "countSampleNorm_1"
+        BEL "countTestNorm_0" BEL "countTestNorm_1" BEL "sumSample_0" BEL
+        "sumSample_1" BEL "sumSample_2" BEL "sumSample_3" BEL "sumSample_4"
+        BEL "sumSample_5" BEL "sumSample_6" BEL "sumSample_7" BEL
+        "sumSample_8" BEL "sumSample_9" BEL "sumSample_10" BEL "sumSample_11"
+        BEL "sumTest_0" BEL "sumTest_1" BEL "sumTest_2" BEL "sumTest_3" BEL
+        "sumTest_4" BEL "sumTest_5" BEL "sumTest_6" BEL "sumTest_7" BEL
+        "sumTest_8" BEL "sumTest_9" BEL "sumTest_10" BEL "sumTest_11" BEL
+        "count_DTW_matrix_0" BEL "count_DTW_matrix_1" BEL "count_DTW_matrix_2"
+        BEL "count_DTW_matrix_3" BEL "count_DTW_matrix_4" BEL
+        "count_DTW_matrix_5" BEL "count_DTW_matrix_6" BEL "count_DTW_matrix_7"
+        BEL "count_DTW_matrix_8" BEL "count_DTW_matrix_9" BEL
+        "count_DTW_matrix_10" BEL "count_DTW_matrix_11" BEL "startFlag" BEL
+        "flagReceivingSample" BEL "flagReceivingTest" BEL "finish" BEL
+        "valid_min" BEL "active_Sample" BEL "wea_DTW_Matrix" BEL
+        "finishNormSample" BEL "finishNormTest" BEL "valid_temp" BEL
+        "addrSample_0" BEL "addrTest_0" BEL "start_read_mins" BEL
+        "addrTest_0_1" BEL "addrSample_0_1" BEL "addrTest_1_1" BEL
+        "addrSample_1_1" BEL "addrTest_4_1" BEL "addrSample_4_1" BEL
+        "addrTest_5_1" BEL "addrSample_5_1" BEL "addrTest_6_1" BEL
+        "addrTest_7_1" BEL "addrSample_6_1" BEL "addrSample_7_1" BEL
+        "addrTest_9_1" BEL "addrTest_8_1" BEL "addrSample_9_1" BEL
+        "addrSample_8_1" BEL "addrSample_10_1" BEL "addrTest_10_1" BEL
+        "addrSample_3_1" BEL "addrTest_3_1" BEL "addrTest_0_2" BEL
+        "addrSample_0_2" BEL "addrTest_2_1" BEL "addrSample_2_1" BEL
+        "addrTest_1_2" BEL "addrSample_1_2" BEL "addrTest_5_2" BEL
+        "addrSample_5_2" BEL "addrTest_7_2" BEL "addrTest_6_2" BEL
+        "addrSample_7_2" BEL "addrSample_6_2" BEL "sumSample_8_1" BEL
+        "sumTest_8_1" BEL "sumSample_9_1" BEL "sumTest_9_1" BEL "addrTest_0_3"
+        BEL "addrSample_0_3" BEL "addrTest_2_2" BEL "addrSample_3_2" BEL
+        "addrSample_2_2" BEL "addrTest_3_2" BEL "addrTest_4_2" BEL
+        "addrSample_4_2" BEL "addrTest_1_3" BEL "addrSample_1_3" BEL
+        "addrTest_7_3" BEL "addrTest_8_2" BEL "addrSample_8_2" BEL
+        "addrSample_10_2" BEL "addrTest_10_2" BEL "sumSample_8_2" BEL
+        "sumTest_8_2" BEL "addrTest_1_4" BEL "addrSample_1_4" BEL
+        "addrSample_7_3" BEL "addrTest_9_2" BEL "addrSample_9_2" BEL
+        "clk_BUFGP/BUFG" PIN
+        "DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram_pins<28>"
+        PIN
+        "DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram_pins<28>"
+        PIN
+        "DTW_Matrix_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram_pins<28>"
+        PIN
+        "Test_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM9.ram_pins<26>"
+        PIN
+        "Test_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram_pins<28>"
+        PIN
+        "Sample_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM9.ram_pins<26>"
+        PIN
+        "Sample_Memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram_pins<28>";
+TS_clk = PERIOD TIMEGRP "clk" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

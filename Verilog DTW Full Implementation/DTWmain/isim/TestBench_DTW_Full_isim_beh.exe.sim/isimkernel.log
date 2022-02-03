@@ -1,0 +1,28 @@
+Command line:
+   TestBench_DTW_Full_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  7861
+
+Tue Feb 01 11:34:48 2022
+
+
+ Elaboration Time: 0.8125 sec
+
+ Current Memory Usage: 4710.21 Meg
+
+ Total Signals          : 462
+ Total Nets             : 1559
+ Total Signal Drivers   : 196
+ Total Blocks           : 54
+ Total Primitive Blocks : 43
+ Total Processes        : 234
+ Total Traceable Variables  : 1017
+ Total Scalar Nets and Variables : 184209
+
+ Total Simulation Time: 1 sec
+
+ Current Memory Usage: 4710.21 Meg
+
+Tue Feb 01 11:35:10 2022
+

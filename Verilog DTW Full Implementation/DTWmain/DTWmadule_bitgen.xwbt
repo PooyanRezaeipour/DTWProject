@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\Bachlor_Project\Verilog DTW Full Implementation 4\DTWmain\DTWmadule.ncd
+OUTFILE=E:\Bachlor_Project\Verilog DTW Full Implementation 4\DTWmain\DTWmadule.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=E:\Bachlor_Project\Verilog DTW Full Implementation 4\DTWmain
+LICENSE=WebPack
+USER_INFO=__0_0_0
